@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:fragment="head">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Title</title>
+</head>
+<body>
+<fieldset>
+    <legend>Product Information</legend>
+    <table th:object="${product}">
+        <tr>
+            <td>Name: </td>
+            <td th:text="*{name}"> </td>
+        </tr>
+        <tr>
+            <td>Price: </td>
+            <td th:text="*{price}"> </td>
+        </tr>
+        <tr>
+            <td>Description: </td>
+            <td th:text="*{description}"> </td>
+        </tr>
+    </table>
+</fieldset>
+</body>
+</html>
